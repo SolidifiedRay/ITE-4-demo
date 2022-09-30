@@ -14,19 +14,17 @@ import hashlib
 def _get_resolvable_url(generic_uri):
   """
   Convert a generic uri to an API URL that represent a Github entity
-
   We should consider what generic_url looks like. Here is a draft idea of what
   it should look like.
     github:org/repo:pr:number
     github:org/repo:commit:id
-
   Args:
     generic_uri: a generic_uri representing a GitHub entity
-
   Returns:
     an API URL representing a GitHub entity
   """
   uri_split = generic_uri.split(':')
+  path = ''
 
   if uri_split[2] == 'pr':
     path = 'repos/{}/pulls/{}'.format(uri_split[1], uri_split[3])
@@ -43,18 +41,14 @@ def _hash_review_representation(review):
   Capture representative fields in a review and return its hash. We may want to 
   be able to retrieve each status of the comment, such as CHANGES_REQUESTED and 
   APPROVED. We may also want to know who reviewed the PR and approved it.
-
   some possible policies of reviews:
   - Reviews should be done by authorized personnel (such as the memeber of the 
     organization)
   - The code should not be pushed unless it has an APPROVED state
-
   We can incorporate ITE-4 there for review attestations. This could be a part
   of the statement's subject.
-
   Args:
     Review response data from Github API calls
-
   Returns:
     A hash that represent a Github review
   '''
@@ -75,10 +69,8 @@ def _hash_review_representation(review):
 def get_hashable_representation(generic_uri):
   """
   Obtain a dict that helps provide attestationns about a GitHub entity
-
   Args:
     generic_uri: a generic_uri representing a GitHub entity
-
   Returns:
     A dictionary that represent a Github enitty
   """
@@ -126,10 +118,8 @@ def get_hashable_representation(generic_uri):
 def hash_artifacts(generic_url):
     """
     Obtain a hash from a GitHub abstract entity
-
     Args:
       generic_uri: a generic_uri representing a GitHub entity
-
     Returns:
       A hash that represent a Github enitty
     """
