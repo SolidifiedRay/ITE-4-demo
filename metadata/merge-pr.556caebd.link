@@ -1,0 +1,34 @@
+{
+ "signatures": [
+  {
+   "keyid": "556caebdc0877eed53d419b60eddb1e57fa773e4e31d70698b588f3e9cc48b35",
+   "sig": "b6891e0a6e0af8438cb7627658c0702ea895364c64e9629d110dcd55509b31611d4b84ca00248d2388a3fe44f902e3bfe7ef6fe170ecaa02656b40279e16a10ba1c61df1ca3be0340462e37545f4e05ac3d980cbf01ab73581df5ae42476740b9874a8e88184f42a4f809de00397f35cd23d569d25ab9568f7d93d22d85dcc45686f863f1b51ba28c6ec3d89787844d8af740bc928b32c07e93dacf28785b6b53bb909054fb36ed4144c19f990a053fb9315c88d4aaa8e1f5ca02cb87ca8d43fb512bdb7eab641f743b23c506defe470d29efeed44ba0e79fde84b7d54888bc4e3b72de9ee01f1937e8f29b276110b53828b0337f049da9161584b136a3f12dd391a706a2bf626685a41026234087a1ea96562a7b65da4412a138bb7597efd7e7b8baa4d432a77ab402c7a2b3f7beb4768f2ce741d722732c20cd34b8aead8e64c3155113acd409d8270a3fd92726964e74240df615b078112baed0f50a27925294f3ae01cc876267dba1e1b20a9558a78948379cb3259caa4a9a3329476df5a"
+  }
+ ],
+ "signed": {
+  "_type": "link",
+  "byproducts": {
+   "return-value": 1,
+   "stderr": "",
+   "stdout": ""
+  },
+  "command": [
+   "gh",
+   "pr",
+   "merge",
+   "2"
+  ],
+  "environment": {},
+  "materials": {
+   "foo.py": {
+    "sha256": "e580edd8eea3fd648aa317be994e22d4365fda66b89048f806222a9c3c47d0ed"
+   }
+  },
+  "name": "merge-pr",
+  "products": {
+   "foo.py": {
+    "sha256": "e580edd8eea3fd648aa317be994e22d4365fda66b89048f806222a9c3c47d0ed"
+   }
+  }
+ }
+}

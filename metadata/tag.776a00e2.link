@@ -1,0 +1,33 @@
+{
+ "signatures": [
+  {
+   "keyid": "776a00e29f3559e0141b3b096f696abc6cfb0c657ab40f441132b345b08453f5",
+   "sig": "95d75aae987ae30f779d20acffeffcd0144ad231ccf90cb815892d6c7f713f2cf02bf464c850d739b064e06249b8a2fd93204fe16dc54cbe2392266c0645c1145520c45f46f81fd0f6b7e4d446cb682fb2fd4aa7b0ef27f1b69c9625b840c074954547d239e673bb766731e12aabf8655d44f55c25cf6e5205a5b8b6aadb0ca4ad048ebc06c675d1bddc81ad668bd5bf11d8c97f62413c8b495d6a5bf433b3e567392b12e07211351844ae012d117f055f82985f6c37195adb9e11fb8b4777b750e5d6ea40b55634f32e59921b533df9ed35a7d96b2003efa94ca8a1a1a6324356119be66fb2d58c2f5e99545a26bf3050e99d8a31ec7981194f5f1981bf9f91bc6e2830f2792c07dd0d0545837ebb9b116b30fc8bfda305d1b98de379798a63fbd50cf680ef75f3b1599e1108eca176dde270ea0b7a68c275b9211aee8d256cecb58b730d0d3381e93ed376600f96c8e849cf918f6ef6e1c4c77dc7be33e375a0d0d9ad70cc5fd6c9c261c2f721841fe95700d3ddd7c7c7af07f8a4bf575084"
+  }
+ ],
+ "signed": {
+  "_type": "link",
+  "byproducts": {
+   "return-value": 0,
+   "stderr": "",
+   "stdout": ""
+  },
+  "command": [
+   "git",
+   "tag",
+   "v1.1"
+  ],
+  "environment": {},
+  "materials": {
+   "foo.py": {
+    "sha256": "e580edd8eea3fd648aa317be994e22d4365fda66b89048f806222a9c3c47d0ed"
+   }
+  },
+  "name": "tag",
+  "products": {
+   "foo.py": {
+    "sha256": "e580edd8eea3fd648aa317be994e22d4365fda66b89048f806222a9c3c47d0ed"
+   }
+  }
+ }
+}
