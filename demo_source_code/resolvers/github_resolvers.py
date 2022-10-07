@@ -58,7 +58,7 @@ def _hash_review_representation(review):
   review_representation['author_association'] = review['author_association']
   review_representation['state'] = review['state']
 
-  dhash = hashlib.md5()
+  dhash = hashlib.sha256()
   encoded = json.dumps(review_representation, sort_keys=True).encode()
   dhash.update(encoded)
   hash_artifact = dhash.hexdigest()
@@ -125,7 +125,7 @@ def hash_artifacts(generic_url):
     """
     representation_object = get_hashable_representation(generic_url)
 
-    dhash = hashlib.md5()
+    dhash = hashlib.sha256()
     encoded = json.dumps(representation_object, sort_keys=True).encode()
     dhash.update(encoded)
 
