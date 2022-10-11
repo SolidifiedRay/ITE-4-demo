@@ -1,0 +1,3 @@
+[submodule "in-toto"]
+	path = in-toto
+	url = git@github.com:in-toto/in-toto.git
