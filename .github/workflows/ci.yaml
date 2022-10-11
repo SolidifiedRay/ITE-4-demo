@@ -1,6 +1,9 @@
 name: container-build
 
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+      - 'container-ci-build'
 
 jobs:
   docker:
@@ -35,7 +38,7 @@ jobs:
         name: Print stuff
         run: |
           pip install -r requirements.txt
-          python3 resolve_gh_action.py 'docker' '${{ env.TAG }}' '${{ steps.build-and-push.outputs.digest }}'
+          python3 demo_source_code/resolvers/container-build.py 'docker' '${{ env.TAG }}' '${{ steps.build-and-push.outputs.digest }}'
   buildah:
     runs-on: ubuntu-latest
     steps:
@@ -65,4 +68,4 @@ jobs:
         name: Print stuff
         run: |
           pip install -r requirements.txt
-          python3 resolve_gh_action.py 'oci' '${{ steps.push-image.outputs.registry-path }}' '${{ steps.push-image.outputs.digest }}'
+          python3 demo_source_code/resolvers/container-build.py 'oci' '${{ steps.push-image.outputs.registry-path }}' '${{ steps.push-image.outputs.digest }}'
