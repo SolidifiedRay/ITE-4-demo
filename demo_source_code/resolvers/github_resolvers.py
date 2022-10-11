@@ -89,7 +89,7 @@ def get_hashable_representation(generic_uri):
   if github_entity_type == 'commit':
     representation_object['commit_id'] = response_data['sha']
     representation_object['author'] = response_data['author']['login']
-    representation_object['tree'] = response_data['tree']['sha']
+    representation_object['tree'] = response_data['commit']['tree']['sha']
 
     return representation_object
 
